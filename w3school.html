@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="w3logo.jpg" type="image/x-icon">
+
+
+    <title>w3schools</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: none;
+        }
+
+        /* navbar  */
+        .navbar {
+            display: flex;
+            font-family: 'Source Sans Pro', sans-serif;
+            justify-content: space-between;
+            font-weight: 550;
+            height: 78px;
+        }
+
+        .navbar-list{
+            display: none;
+        }
+
+        .navlist{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(231, 233, 235);
+            padding: 2.01em 16px;
+        }
+
+        .navbar-list li{
+            list-style: none;
+            font-size: 22px;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding: 8px 16px;
+
+        }
+
+        .close{
+            text-align: right !important;
+            font-weight: bold;
+        }
+
+
+        .nav-left {
+            display: flex;
+        }
+
+        .nav-left img {
+            height: 72px;
+            width: 72px;
+            padding: 2px 0px 2px 15px;
+        }
+
+        .nav-left a:hover {
+            opacity: 0.9;
+        }
+
+        .navbar ul {
+            display: flex;
+        }
+
+        .navbar li {
+            list-style: none;
+            padding: 30px 20px;
+        }
+
+        .navbar li:hover {
+            background-color: #04AA6D;
+            color: white;
+            cursor: pointer;
+        }
+
+        .dnone{
+            display: none;
+        }
+
+        .newdiv1 {
+            display: flex;
+            padding: 30px 20px;
+        }
+
+        .newdiv1:hover {
+            background-color: #04AA6D;
+            color: white;
+            cursor: pointer;
+        }
+
+        .new {
+            border: 1px solid black;
+            color: black !important;
+            border-radius: 15px;
+            font-size: 9px;
+            padding: 4px 10px;
+            margin: auto;
+            background-color: white;
+        }
+
+        .nav-right {
+            display: flex;
+            padding: 0px 15px;
+            margin: 20px 0px 20px 0px;
+        }
+
+        .search {
+            list-style: none;
+            font-size: 20px;
+            padding: 10px 15px !important;
+            border-radius: 20px;
+        }
+
+        .search:hover {
+            color: #04AA6D !important;
+            background-color: white !important;
+            cursor: pointer;
+        }
+
+        #optionfuture{
+            display: none;
+        }
+
+        .newdiv2 {
+            display: flex;
+            padding: 10px 20px;
+            margin: 0px 5px;
+            border-radius: 20px;
+            background-color: #FFC0C7;
+        }
+
+        .newdiv2:hover {
+            background-color: #04AA6D;
+            color: white;
+            cursor: pointer;
+        }
+
+        .gap{
+            padding: 0px 7px 0px 0px ;
+        }
+
+        #paidcourse{
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        #login {
+            border: none;
+            margin: 0px 5px;
+            padding: 10px 40px;
+            border-radius: 20px;
+            background-color: #04AA6D;
+            color: white;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        #login:hover {
+            background-color: #037c50;
+            cursor: pointer;
+        }
+
+        /* home  */
+        .home {
+            /* width: 100%;
+            height: calc(100% - 120px); */
+            background-color: #282A35;
+            display: flex;
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+
+        /* Left side in home  */
+        .HTML {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            flex: 50%;
+            color: white;
+            font-weight: 700;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .HTML h1 {
+            font-size: 90px;
+            margin: auto;
+        }
+
+        .HTML p {
+            margin-bottom: 1.2rem;
+        }
+
+        .htmllinks {
+            text-decoration: none;
+            color: black;
+            border-radius: 25px;
+            width: 200px;
+            margin: 10px auto;
+            padding: 14px 1px;
+            text-align: center;
+            background-color: white;
+            position: relative;
+        }
+
+        .link1 {
+            color: white;
+            background-color: #04AA6D;
+        }
+
+        .link1:hover {
+            background-color: #02a066;
+        }
+
+        #link2 {
+            background-color: #FFF4A3;
+        }
+
+        #link2:hover {
+            background-color: #f7e980;
+        }
+
+        .videonew {
+            position: absolute;
+            background-color: #FFC0C7 !important;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.75rem;
+            z-index: 1;
+            top: -8px;
+            left: -16px;
+            transform: rotate(-20deg);
+        }
+
+        #link3 {
+            background-color: white;
+        }
+
+        #link3:hover {
+            background-color: rgb(228, 226, 226);
+        }
+
+        .coderunner {
+            flex: 42%;
+            margin: 20px 40px 15px 39px;
+            border: 15px solid #E7E9EB;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .coderunner h2 {
+            background-color: #E7E9EB;
+            font-weight: 600;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 22px;
+            padding: 16px 4px;
+        }
+
+        .code {
+            border-left: 4px solid #04AA6D;
+            font-family: Consolas, Menlo, "courier new", monospace;
+            padding: 10px;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .brown {
+            color: brown;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .try {
+            padding: 12px 55px;
+        }
+
+        .tryit {
+            background-color: #E7E9EB;
+            padding: 28px 0px 7px 0px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+
+
+        @media screen and (max-width:1200px){
+            #new1{
+                display: none;
+        }
+        #videos{
+                padding: 0;
+            }
+    }
+
+        @media screen and (max-width:1152px){
+            #new2{
+                display: none;
+        }
+        #website{
+                padding: 0;
+            }
+    }
+        
+        @media screen and (max-width: 1080px) {
+            .newdiv1{
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            #paidcourse{
+                display: none;
+            }
+            .home{
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 860px) {
+            .dnone1{
+                display: none;
+            }
+            .dnone{
+                display: block;
+            }
+            .newdiv2{
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 859px) {
+            .navbar-list{
+                display: block;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .navbar-list{
+                display: none;
+            }
+            .HTML h1{
+                font-size: 55px;
+                padding: 0px 0px 20px 0px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .coderunner{
+                display: none;
+            }
+            .search1{
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width: 599px) {
+            #login{
+                font-size: 12px;
+                padding: 0px 15px;
+            }
+        }
+        
+        @media screen and (max-width: 359px) {
+            #option{
+                display: none;
+            }
+            #optionfuture{
+                display: flex;
+                justify-content: right;
+            }
+            .search{
+                margin: -9px 27px 17px -31px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="nav-left">
+                <a href="#"><img src="w3logo.jpg" alt=""></a>
+                <ul>
+                    <li class="dnone1">Tutorials</li>
+                    <li class="dnone1">References</li>
+                    <li class="dnone1">Exercises</li>
+                    <li class="dnone" >Menu</li>
+                </ul>
+                <div class="newdiv1">
+                    <p class="gap" id="videos">Videos</p> 
+                    <p class="new" id="new1">NEW</p>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul id="option">
+                    <i class="fa fa-star-half-o search search1" aria-hidden="true"></i>
+                    <i class="fa fa-globe search"></i>
+                    <i class="fa fa-search search"></i>
+                </ul>
+                <div class="newdiv2">
+                    <p class="gap" id="website">Website</p>
+                    <p class="new" id="new2">NEW</p>
+                </div>
+                <ul>
+                    <li id="paidcourse">Paid Courses</li>
+                    <button id=login>Log in</button>
+                </ul>
+            </div>
+        </div>
+        <ul id="optionfuture">
+            <i class="fa fa-star-half-o search search1" aria-hidden="true"></i>
+            <i class="fa fa-globe search"></i>
+            <i class="fa fa-search search"></i>
+        </ul>
+    </nav>
+
+    <nav class="navbar-list">
+        <div class="navlist">
+            <ul>
+                <li class="close" >X</li>
+                <li class="">Tutorials</li>
+                <li class="">References</li>
+                <li class="">Exercises</li>
+                <li class="" >Paid Courses</li>
+                <li class="" >Spaces</li>
+                <li class="" >Videos</li>
+                <li class="" >Shop</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <div class="home">
+            <div class="HTML">
+                <h1>HTML</h1>
+                <p>The language for building web pages</p>
+                <a class="htmllinks link1" href="#">Learn HTML</a>
+                <a class="htmllinks" id="link2" href="#">Video Tutorial<span class="videonew">NEW</span></a>
+                <a class="htmllinks" id="link3" href="#">HTML Reference</a>
+            </div>
+            <div class="coderunner">
+                <h2>HTML Example:</h2>
+                <div class="code">
+                    <p> <span class="blue">&lt;</span><span class="brown">!DOCTYPE</span><span class="red">
+                            html</span><span class="blue">&gt;</span> </p>
+                    <p><span class="blue">&lt;</span><span class="brown">html</span><span class="blue">&gt;</span></p>
+                    <p><span class="blue">&lt;</span><span class="brown">title</span><span class="blue">&gt;</span>HTML
+                        Tutorial<span class="blue">&lt;</span><span class="brown">/title</span><span
+                            class="blue">&gt;</span></p>
+                    <p><span class="blue">&lt;</span><span class="brown">body</span><span class="blue">&gt;</span></p>
+                    <br>
+                    <br>
+                    <p><span class="blue">&lt;</span><span class="brown">h1</span><span class="blue">&gt;</span>This is
+                        a heading<span class="blue">&lt;</span><span class="brown">/h1</span><span
+                            class="blue">&gt;</span></p>
+                    <p><span class="blue">&lt;</span><span class="brown">p</span><span class="blue">&gt;</span>This is a
+                        paragraph.<span class="blue">&lt;</span><span class="brown">/p</span><span
+                            class="blue">&gt;</span></p>
+                    <br>
+                    <br>
+                    <p><span class="blue">&lt;</span><span class="brown">/body</span><span class="blue">&gt;</span></p>
+                    <p><span class="blue">&lt;</span><span class="brown">/html</span><span class="blue">&gt;</span></p>
+                </div>
+                <div class="tryit">
+                    <a class="htmllinks link1 try" href="#">Try it Yourself</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
